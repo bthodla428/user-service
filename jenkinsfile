@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    
+    stages{
+        stage("Build Code")
+        {
+            steps{
+                sh "mvn compile"
+            }
+        }
+        stage("Test Code")
+        {
+            steps{
+                sh "mvn test"
+            }
+        }
+   }
+}
